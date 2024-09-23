@@ -1,0 +1,107 @@
+:root {
+    --primaryColor: #0d1832;
+    --secondaryColor: #7499d1;
+    --tertiaryColor: whitesmoke;
+    --accentColor: #ffd34d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--tertiaryColor);
+    color: #0d1832;
+}
+
+
+header {
+    h1 {
+        padding: 1rem;
+        background-color: var(--primaryColor);
+        color: var(--tertiaryColor);
+    }
+    nav {
+        background-color: var(--secondaryColor);
+        button {
+            cursor: pointer;
+        }
+    }
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        list-style: none;
+        padding-inline: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;    
+
+        button {
+            background-color: var(--secondaryColor);
+            border: none;
+            font-size: 1rem;
+            color: var(--tertiaryColor);
+        }
+        .active {
+            color: var(--accentColor);
+        }
+    }
+}
+
+
+.movie {
+    margin: 2rem;
+    border: 1px solid var(--primaryColor);
+    border-radius: 10px;
+    overflow: hidden;
+
+    h2 {
+        padding: 0.5rem;
+        background-color: var(--primaryColor);
+        color: var(--tertiaryColor);
+    }
+
+    .movie-content {
+        display: grid;
+        grid-template-areas: 
+        "poster"
+        text"
+        ;
+    }
+    @media (min-width: 550px) {
+        .movie-content {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+
+    
+    img {
+        max-width: 100%;
+        height: 100%;
+        justify-self: center;
+    }
+
+    .movie-text {
+    padding: 1rem;
+
+        p:first-child {
+        margin-bottom: 2rem;
+        }
+        p:nth-child(2) {
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+
+footer {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
