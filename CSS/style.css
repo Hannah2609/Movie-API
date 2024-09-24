@@ -29,25 +29,42 @@ header {
             cursor: pointer;
         }
     }
+
     ul {
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        flex-flow: column nowrap;
+        gap: 1rem;
         list-style: none;
         padding-inline: 1rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;    
+        padding-top: 1rem;
+        padding-bottom: 1rem; 
+        
 
         button {
             background-color: var(--secondaryColor);
             border: none;
-            font-size: 1rem;
+            font-size: 1.5rem;
             color: var(--tertiaryColor);
         }
         .active {
             color: var(--accentColor);
         }
     }
+
+    @media (min-width: 450px) {
+        ul {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        list-style: none;
+        padding-inline: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem; 
+        
+
+    }
+}
+
+
 }
 
 
